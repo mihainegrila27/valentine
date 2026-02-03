@@ -36,6 +36,16 @@
       left: 160px;
       top: 120px;
     }
+    @keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse 1.2s infinite;
+}
+
   </style>
 </head>
 
@@ -65,18 +75,28 @@
       noBtn.style.top = y + "px";
     });
 
-    yesBtn.addEventListener("click", () => {
-      document.body.innerHTML = `
-        <div style="text-align:center;">
-          <h1>YAY!!! 💘😍</h1>
-          <p>Stiam eu ca vei spune DA! 😘</p>
-        </div>
-      `;
-    });
+yesBtn.addEventListener("click", () => {
+  document.body.innerHTML = `
+    <div style="text-align:center;">
+      <h1>YAY!!! 💘😍</h1>
+
+      <img 
+        src="meandwifie.jpeg"
+        alt="Love"
+        class="pulse"
+        style="max-width:280px; margin:20px 0;"
+      >
+
+      <p>Stiam eu ca vei spune DA! 😘</p>
+    </div>
+  `;
+});
+
   </script>
 
 </body>
 </html>
+
 
 
 
