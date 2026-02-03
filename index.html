@@ -37,13 +37,19 @@
 <body>
 
   <div class="card">
-    <h2>Will you be my Valentine? 💖</h2>
+    <h2 id="question"></h2>
 
     <button id="yes">YES</button>
     <button id="no">NO</button>
   </div>
 
   <script>
+     const params = new URLSearchParams(window.location.search);
+  const name = params.get("name") || "you";
+
+  const question = document.getElementById("question");
+  question.innerText = `${name}, will you be my Valentine? 💖`;
+    
     const noBtn = document.getElementById("no");
     const yesBtn = document.getElementById("yes");
 
@@ -61,3 +67,4 @@
 
 </body>
 </html>
+
