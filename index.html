@@ -45,10 +45,10 @@
 
   <script>
      const params = new URLSearchParams(window.location.search);
-  const name = params.get("name") || "you";
+  const name = params.get("Laura") || "you";
 
   const question = document.getElementById("question");
-  question.innerText = `${name}, will you be my Valentine? 💖`;
+  question.innerText = `${Laura}, will you be my Valentine? 💖`;
     
     const noBtn = document.getElementById("no");
     const yesBtn = document.getElementById("yes");
@@ -61,10 +61,11 @@
     });
 
     yesBtn.onclick = function () {
-      document.body.innerHTML = "<h1>YAY!!! 💘😍</h1>";
+      document.body.innerHTML = "<h1>YAY!!! Te iubesc! 💘😍</h1>";
     };
   </script>
 
 </body>
 </html>
+
 
